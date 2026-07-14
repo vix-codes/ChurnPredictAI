@@ -1,0 +1,66 @@
+# ChurnPredict AI — .gitignore
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Virtual Environments ──────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Model Artifacts (tracked separately or via DVC) ──────────
+models/*.pkl
+# Uncomment to also ignore output files:
+# outputs/
+
+# ── Data ──────────────────────────────────────────────────────
+data/raw/*.csv
+data/processed/
+
+# ── Logs ──────────────────────────────────────────────────────
+logs/
+
+# ── OS / IDE ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── pytest ────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── mypy ─────────────────────────────────────────────────────
+.mypy_cache/
+
+# ── Streamlit ─────────────────────────────────────────────────
+.streamlit/
+
+# ── Secrets ───────────────────────────────────────────────────
+*.env
+secrets.toml
