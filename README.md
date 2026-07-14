@@ -1,6 +1,6 @@
 # 🔮 ChurnPredict AI — Enterprise Edition
 
-> **An enterprise-grade customer churn prediction platform** built with Python, Scikit-learn, and Streamlit. Designed to the standard of ML engineering teams at MathCo, Fractal Analytics, Tiger Analytics, Tredence, Mu Sigma, Amazon, and Microsoft.
+> An end-to-end customer churn prediction platform featuring advanced feature engineering, hyperparameter tuning, SHAP explainability, interactive what-if analysis, batch predictions, and a modern Streamlit dashboard for real-world business insights.
 
 [![Python](https://img.shields.io/badge/Python-3.12%2B-blue?logo=python)](https://python.org)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4%2B-orange?logo=scikit-learn)](https://scikit-learn.org)
