@@ -103,10 +103,10 @@ def render_dataset_kpis(df: pd.DataFrame) -> None:
     churn_rate = None
     if "Churn" in df.columns:
         col_vals = df["Churn"]
-        if col_vals.dtype == object:
-            churn_rate = (col_vals == "Yes").mean()
-        else:
+        if pd.api.types.is_numeric_dtype(col_vals):
             churn_rate = col_vals.mean()
+        else:
+            churn_rate = (col_vals == "Yes").mean()
 
     cols = st.columns(4)
     with cols[0]:
