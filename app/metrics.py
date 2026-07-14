@@ -104,9 +104,9 @@ def render_dataset_kpis(df: pd.DataFrame) -> None:
     if "Churn" in df.columns:
         col_vals = df["Churn"]
         if pd.api.types.is_numeric_dtype(col_vals):
-            churn_rate = col_vals.mean()
+            churn_rate = float(col_vals.mean())
         else:
-            churn_rate = (col_vals == "Yes").mean()
+            churn_rate = float((col_vals == "Yes").sum()) / len(df)
 
     cols = st.columns(4)
     with cols[0]:
