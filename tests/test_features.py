@@ -41,7 +41,7 @@ from src.features import (
 @pytest.fixture()
 def base_df() -> pd.DataFrame:
     return pd.DataFrame({
-        "tenure": [1, 12, 36, 60],
+        "tenure": [1, 12, 36, 65],
         "MonthlyCharges": [20.0, 50.0, 75.0, 95.0],
         "TotalCharges": [20.0, 600.0, 2700.0, 5700.0],
         "Partner": ["No", "Yes", "No", "Yes"],

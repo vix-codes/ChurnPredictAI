@@ -92,6 +92,7 @@ CATEGORICAL_COLS: list[str] = [
     "SpendCategory",
     "MonthlyChargeBucket",
     "InternetServiceCategory",
+    "RetentionRiskBucket",
 ]
 
 # ---------------------------------------------------------------------------

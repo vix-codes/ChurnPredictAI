@@ -213,13 +213,13 @@ if __name__ == "__main__":
     # Save to sample dir
     SAMPLE_DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(SAMPLE_DATA_FILE, index=False)
-    print(f"✔  Sample data saved → {SAMPLE_DATA_FILE}")
+    print(f"Sample data saved -> {SAMPLE_DATA_FILE}")
 
     # Also copy to raw/ so the pipeline finds it automatically
     RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
     raw_target = RAW_DATA_DIR / "telco_churn.csv"
     df.to_csv(raw_target, index=False)
-    print(f"✔  Raw data copy    → {raw_target}")
+    print(f"Raw data copy     -> {raw_target}")
 
     churn_rate = (df["Churn"] == "Yes").mean()
     print(f"\nDataset Summary")
