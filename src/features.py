@@ -64,11 +64,10 @@ def add_spend_category(df: pd.DataFrame) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 def add_monthly_charge_bucket(df: pd.DataFrame) -> pd.DataFrame:
     """Split MonthlyCharges into 5 equal-width buckets."""
-    df["MonthlyChargeBucket"] = pd.qcut(
-        df["MonthlyCharges"],
-        q=5,
-        labels=["Q1", "Q2", "Q3", "Q4", "Q5"],
-        duplicates="drop",
+    bins = [0, 25, 55, 80, 100, float("inf")]
+    labels = ["Q1", "Q2", "Q3", "Q4", "Q5"]
+    df["MonthlyChargeBucket"] = pd.cut(
+        df["MonthlyCharges"], bins=bins, labels=labels, right=True
     ).astype(str)
     return df
 
